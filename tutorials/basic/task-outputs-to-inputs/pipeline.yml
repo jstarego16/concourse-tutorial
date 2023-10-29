@@ -3,8 +3,8 @@ resources:
   - name: resource-tutorial
     type: git
     source:
-      uri: https://github.com/starkandwayne/concourse-tutorial.git
-      branch: develop
+      uri: https://github.com/jstarego16/concourse-tutorial.git
+      branch: master
 
 jobs:
   - name: job-pass-files
@@ -15,7 +15,7 @@ jobs:
         config:
           platform: linux
           image_resource:
-            type: docker-image
+            type: registry-image
             source: {repository: busybox}
 
           inputs:
@@ -30,7 +30,7 @@ jobs:
         config:
           platform: linux
           image_resource:
-            type: docker-image
+            type: registry-image
             source: {repository: busybox}
 
           inputs:

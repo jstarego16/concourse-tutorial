@@ -1,3 +1,7 @@
 #!/bin/sh
 
-ls some-files/*
+pwd
+cd some-files
+pwd
+ls -lt
+cat *
